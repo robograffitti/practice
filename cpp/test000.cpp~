@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std; // std namespace is used
+
+int main() {
+  int month = 11, day = 3;
+  double percent = 25.2525;
+
+  cout << month << "月";
+  cout << day << "日";
+  cout << "降水確率" << percent << "%";
+
+  return 0;
+}
