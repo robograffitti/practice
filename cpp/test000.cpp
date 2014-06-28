@@ -12,7 +12,6 @@ int main(int argc, char *argv[]) {
   for (int i=0; i < 2; i++) {
     cout << "argv[" << i << "]:" << argv[i] << "\n";
     } */
-
   // Reprement with recursive call
   RecursiveCall(argc, argv);
 
@@ -25,6 +24,7 @@ int main(int argc, char *argv[]) {
 
 void RecursiveCall(int argc, char *argv[]) {
   argc -= 1;
+
   if (argc >= 0) {
     cout << "argv[" << argc  << "]:" << argv[argc] << "\n";
   } else {
