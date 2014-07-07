@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std; // std namespace is used
 
-
+class myClass;
 void RecursiveCall(int argc, char *argv[]); // prototype declaration
 
 int main(int argc, char *argv[]) {
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
   cout << day << "日\n";
   cout << "降水確率" << percent << "%\n";
 
-  // char *str[size]; 
+  // char *str[size];
   string str; // string do not need size info
   do {
     cout << ": ";
@@ -27,6 +27,19 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+
+class myClass {
+  int a;
+  void set_a(int num) {
+    a = num;
+  }
+  int get_a() {
+    return a;
+  }
+  // private:
+  // protected:
+  // public:
+}; // Remember to put semicolon!
 
 void RecursiveCall(int argc, char *argv[]) {
   argc -= 1;
