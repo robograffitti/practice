@@ -14,9 +14,16 @@ int main(int argc, char *argv[]) {
   
   int month = 11, day = 3;
   double percent = 25.2525;
-  cout << month << "月";
+  std::cout << month << "月"; // if namespace std is not used
   cout << day << "日\n";
   cout << "降水確率" << percent << "%\n";
+
+  // char *str[size]; 
+  string str; // string do not need size info
+  do {
+    cout << ": ";
+    cin >> str;
+  } while (str != "exit");
 
   return 0;
 }
