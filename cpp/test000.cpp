@@ -49,5 +49,5 @@ void RecursiveCall(int argc, char *argv[]) {
   } else {
     return;
   }
-  return RecursiveCall(argc, argv);
+  return RecursiveCall(argc, argv); // argc can be decremented. not constant.
 }
