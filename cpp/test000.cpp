@@ -1,7 +1,16 @@
 #include <iostream>
 using namespace std; // std namespace is used
 
-class myClass;
+// class myClass;
+class myClass {
+  int a;
+public:
+  void set_a(int num);
+  int get_a();
+  // private: // default
+  // protected:
+  // public:
+}; // Remember to put semicolon!
 void RecursiveCall(int argc, char *argv[]); // prototype declaration
 
 int main(int argc, char *argv[]) {
@@ -10,8 +19,12 @@ int main(int argc, char *argv[]) {
     cout << "argv[" << i << "]:" << argv[i] << "\n";
     } */
   // Reprement with recursive call
+  myClass obj;
+  obj.set_a(25);
+  cout << obj.get_a() << "\n";
+
   RecursiveCall(argc, argv);
-  
+
   int month = 11, day = 3;
   double percent = 25.2525;
   std::cout << month << "月"; // if namespace std is not used
@@ -23,23 +36,18 @@ int main(int argc, char *argv[]) {
   do {
     cout << ": ";
     cin >> str;
+    cout << str << "\n";
   } while (str != "exit");
-
   return 0;
 }
 
-class myClass {
-  int a;
-  void set_a(int num) {
-    a = num;
-  }
-  int get_a() {
-    return a;
-  }
-  // private:
-  // protected:
-  // public:
-}; // Remember to put semicolon!
+void myClass::set_a(int num) {
+  a = num;
+}
+int myClass::get_a() {
+  return a;
+}
+
 
 void RecursiveCall(int argc, char *argv[]) {
   argc -= 1;
