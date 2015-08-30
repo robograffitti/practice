@@ -10,3 +10,6 @@ Practice programming for C++, EusLisp, Emacs Lisp, Java, Python, Java Script, Sc
 3. Switch mapping and localization mode
 - rosservice call set_mode_mapping
 - rosservice call set_mode_localization
+
+========
+"Commit test."
