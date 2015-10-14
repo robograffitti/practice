@@ -1,2 +1,0 @@
-#!/usr/bin/env roseus
-(load "package://peppereus/pepper-interface.l")
