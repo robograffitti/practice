@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>practice</name>
+  <version>0.0.1</version>
+  <description>
+   <p>Metapackage that contains practice package for yoshimalucky</p>
+  </description>
+
+  <maintainer email="y-tanaka@jsk.t.u-tokyo.ac.jp">Yoshimaru Tanak</maintainer>
+  <author email="y-tanaka@jsk.t.u-tokyo.ac.jp">Yoshimaru Tanaka</author>
+
+  <license>BSD</license>
+  <!-- <url type="website">http://ros.org/wiki/jsk_recognition</url> -->
+  <!-- <url type="repository">https://github.com/jsk-ros-pkg/jsk_recognition</url> -->
+  <!-- <url type="bugtracker">https://github.com/jsk-ros-pkg/jsk_recognition/issues</url> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- <run_depend>test_nodelet</run_depend> -->
+  <run_depend>test_node</run_depend>
+  <export>
+    <metapackage/>
+  </export>
+</package>
