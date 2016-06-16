@@ -1,15 +1,15 @@
 #!/usr/bin/env roseus
-(load "package://hrpsys_ros_bridge_tutorials/euslisp/hrp2jsk-interface.l")
+(load "package://hrpsys_ros_bridge_tutorials/euslisp/samplerobot-interface.l")
 
 ;; (ros::roseus "node_name")
 ;; (ros::advertise "/topic" geometry_msgs::PointStamped 1)
 ;; (ros::subscribe "/topic" geometry_msgs::PointStamped #'method-cb)
 ;; (do-until-key (ros::spin-once))
 
-(defun hrp2-init
+(defun sr-init
   ()
-  (hrp2jsk-init)
-  (setq *robot* *hrp2jsk*)
+  (samplerobot-init)
+  (setq *robot* *sr*)
   (objects (list *robot*))
   ;; (send *robot* :reset-manip-pose)
   (send *robot* :reset-pose)
@@ -45,14 +45,14 @@
 
 (defun demo
   ()
-  (hrp2-init)
+  (sr-init)
   (ri-init)
   ;; (st-locomo)
   ;; (jump-test)
   ;;
   )
 
-(defun jump-test
+(defun jump-test ()
   ;; :move-to :move-coords :inverse-kinematics
   (send *robot* :init-pose)
   (send *ri* :angle-vector (send *robot* :angle-vector) 8000)
@@ -68,7 +68,7 @@
   (send *robot* :lleg :inverse-kinematics *lleg-end* :rotational-axis :z)
   (send *ri* :angle-vector (send *robot* :angle-vector) 0.000001)
   ;; no wait interpolation
-  ;; used angle _joint2, 3, 4
+  ;; knee joint can move backward
 
   ;; using :joint-angle
   ;; (send *robot* :lleg_joint2 :joint-angle -18.0) ;; default: -26.0+8
