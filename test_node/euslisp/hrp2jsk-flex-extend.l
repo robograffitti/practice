@@ -52,7 +52,8 @@
   ;;
   )
 
-(defun jump-test
+(defun flex-extend
+  ()
   ;; :move-to :move-coords :inverse-kinematics
   (send *robot* :init-pose)
   (send *ri* :angle-vector (send *robot* :angle-vector) 8000)
@@ -66,7 +67,7 @@
 
   (send *lleg-end* :translate (float-vector 0 0 -250))
   (send *robot* :lleg :inverse-kinematics *lleg-end* :rotational-axis :z)
-  (send *ri* :angle-vector (send *robot* :angle-vector) 0.000001)
+  (send *ri* :angle-vector (send *robot* :angle-vector) 8000)
   ;; (send *ri* :angle-vector (send *robot* :angle-vector) 0.000001)
   ;; no wait interpolation
   ;; used angle _joint2, 3, 4
