@@ -1,0 +1,10 @@
+- git: {local-name: nasa_r2_simulator, uri: 'https://bitbucket.org/nasa_ros_pkg/nasa_r2_simulator.git',
+    version: hydro-devel}
+- git: {local-name: nasa_common, uri: 'https://bitbucket.org/nasa_ros_pkg/nasa_common.git',
+    version: hydro-devel}
+- git: {local-name: nasa_r2_common, uri: 'https://bitbucket.org/nasa_ros_pkg/nasa_r2_common.git',
+    version: hydro-devel}
+- git: {local-name: nasa_robodyn, uri: 'https://bitbucket.org/nasa_ros_pkg/nasa_robodyn.git',
+    version: hydro-devel}
+- git: {local-name: nasa_rosdep, uri: 'https://bitbucket.org/nasa_ros_pkg/nasa_rosdep.git',
+    version: master}
