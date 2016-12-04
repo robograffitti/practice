@@ -1,0 +1,34 @@
+Opti Track
+
+Motive:Tracker
+カメラの位置がずれたらキャリブレーション
+5つのカメラ
+左・トラッキングモード：マーカーが見える
+左・カメラモード：赤外線カメラで画像が見える
+自分がほしい視点になっているか
+反射して光ってマーカと誤認するものは取り除く
+Tracking, Reference, aiming, custom
+
+Block visible で 除去点を指定するとキャリブレーションで無視される．
+キャリプレーション用の棒を振る
+Start wanding
+カメラ1~5に1500点くらいサンプル点を集める
+1~5の全体が色で埋まるように行う．
+ApplyResultでキャリブファイルを保存：部屋名とか．
+世界座標を決める．
+↑Zと直角の軸がX軸の定規みたいなのを置く．
+SetGoundPlaneで決定，
+マーカーをカメラから見えるロボットの位置に付ける
+右クリックしてRigidBodyにする．
+RigidBodySettings で Nameを Robot_1など適当な名前に変える．
+
+UbuntuのPCのIPアドレスをMulticast Interfaceなんちゃらのとこに書く．
+
+roslaunch mocap_optitrack mocap.launch
+mocap.yamlにRigid Body ID と yamlのIDを一致させる．
+Robot_1/poseのトピックで見れる．
+
+Rigid Body 2 -> Robot_2
+
+カメラの位置再調整
+
