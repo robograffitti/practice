@@ -60,9 +60,9 @@ IF(${yaml_cpp_VERSION} VERSION_LESS "0.5.0")
   add_definitions("-DUSE_OLD_YAML")
 ENDIF()
 
-add_service_files(
-  # hoge
-  )
+# add_service_files(
+#   # hoge
+#   )
 
 # generate_dynamic_reconfigure_options(
 #   # hoge
